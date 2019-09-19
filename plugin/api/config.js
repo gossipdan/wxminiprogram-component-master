@@ -6,42 +6,42 @@ const wsAPI = require('./wxApi.js');
 
 const config = {
   c_version: "",
-  base_url: 'https://mp.colorv.com',
-  socket_url: 'wss://mp.colorv.com/nws/socket.io/v2',
+  base_url: 'https://www.baidu.com',
+  socket_url: 'wss://www.baidu.com/nws/socket.io/v2',
 
   getVersion: function() {
     console.log('envVersion', __wxConfig.envVersion);
     let version = __wxConfig.envVersion;
     switch (version) {
       case 'develop':
-        config.base_url = 'https://tapi.colorv.cn'; 
-        config.socket_url = 'wss://tapi.colorv.cn/nws/socket.io/v2'; break; // 测试版环境域名
+        config.base_url = 'https://www.baidu.com'; 
+        config.socket_url = 'wss://www.baidu.com/nws/socket.io/v2'; break; // 测试版环境域名
       case 'trial':
-        config.base_url = 'https://api2.colorv.cn';
-        config.socket_url = 'wss://mp.colorv.com/nws/socket.io/v2'; break; // 体验版环境域名
+        config.base_url = 'https://www.baidu.com';
+        config.socket_url = 'wss://www.baidu.com/nws/socket.io/v2'; break; // 体验版环境域名
       case 'release':
-        config.base_url = 'https://mp.colorv.com';
-        config.socket_url = 'wss://mp.colorv.com/nws/socket.io/v2'; break; // 线上版环境域名
+        config.base_url = 'https://www.baidu.com';
+        config.socket_url = 'wss://www.baidu.com/nws/socket.io/v2'; break; // 线上版环境域名
       default:
-        config.base_url = 'https://mp.colorv.com';
-        config.socket_url = 'wss://mp.colorv.com/nws/socket.io/v2'; // 线上环境域名
+        config.base_url = 'https://www.baidu.com';
+        config.socket_url = 'wss://www.baidu.com/nws/socket.io/v2'; // 线上环境域名
     }
   },
   
   setBaseUrl: function (env) {
     switch (env) {
       case 'tapi':
-        config.base_url = 'https://tapi.colorv.cn';
-        config.socket_url = 'wss://tapi.colorv.cn/nws/socket.io/v2'; break; // tapi
+        config.base_url = 'https://www.baidu.com';
+        config.socket_url = 'wss://www.baidu.com/nws/socket.io/v2'; break; //
       case 'api2':
-        config.base_url = 'https://api2.colorv.cn';
-        config.socket_url = 'wss://mp.colorv.com/nws/socket.io/v2'; break; // api2
+        config.base_url = 'https://www.baidu.com';
+        config.socket_url = 'wss://www.baidu.com/nws/socket.io/v2'; break; //
       case 'mp':
-        config.base_url = 'https://mp.colorv.com';
-        config.socket_url = 'wss://mp.colorv.com/nws/socket.io/v2'; break; // mp 线上版环境域名
+        config.base_url = 'https://www.baidu.com';
+        config.socket_url = 'wss://www.baidu.com/nws/socket.io/v2'; break; //线上版环境域名
       default:
-        config.base_url = 'https://mp.colorv.com';
-        config.socket_url = 'wss://mp.colorv.com/nws/socket.io/v2'; // 线上环境域名
+        config.base_url = 'https://www.baidu.com';
+        config.socket_url = 'wss://www.baidu.com/nws/socket.io/v2'; // 线上环境域名
     }
   },
 
@@ -245,7 +245,7 @@ const config = {
   uploadOneImage: function (path,dirname) {
     return new Promise((resolve, reject) => {
       this.qiniuUpload([path],dirname).then((res) => {
-        let url = 'https://cdn-app-qn-bj.colorv.cn/' + res[0].key;
+        let url = 'www.baidu.com' + res[0].key;
         resolve({ path: res[0].key, url: url });
       })
     })
@@ -274,7 +274,7 @@ const config = {
             resp.data.data.forEach((el, index) => {
               photo_list.push({
                 type: 'photo', id: el, font: "", rotate: 0,
-                url: 'http://cdn-app-qn-bj.colorv.cn/' + res[index].key,
+                url: 'www.baidu.com' + res[index].key,
               });
             })
             resolve(photo_list);
@@ -328,7 +328,7 @@ const config = {
                     type: "video",
                     id: mp4_id,
                     url: logo_path,
-                    mp4_path: 'http://cdn-app-qn-bj.colorv.cn/' + key,
+                    mp4_path: 'www.baidu.com' + key,
                     video_start: 0,
                     video_end: duration,
                     duration: duration,

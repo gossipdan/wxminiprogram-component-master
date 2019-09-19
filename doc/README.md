@@ -43,7 +43,7 @@
     root-class     组件的使用者可以指定这个样式类对应的 class ，就像使用普通class属性一样
   
     属性名                 类型             默认值            说明
-    title                 String           '彩视'            页面标题
+    title                 String           'Luna'            页面标题
     color                 String           '#000000'         标题颜色
     bgStyle               String                             背景颜色样式 style
     cover                 Boolean           false            值为true时可覆盖video等原生组件

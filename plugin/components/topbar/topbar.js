@@ -7,7 +7,7 @@ Component({
   properties: {
     title:{
       type: String,
-      value: '彩视'
+      value: 'Luna'
     },
     color:{
       type: String,

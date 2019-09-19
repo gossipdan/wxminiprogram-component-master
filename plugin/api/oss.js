@@ -2,7 +2,7 @@ var Base64 = require('./base64');
 var oss = {
     OSSAccessKeyId:'073bZXbGCy8GMitg',
     AccessKeySecret: 'j7XAXyiPTD1vEV3HQPl65t2FX0SKV7',
-    uploadImageUrl: 'https://colorvwxapp.oss-cn-shanghai.aliyuncs.com',
+    uploadImageUrl: 'www.baidu.com',
     get_policy: function () {
         var policyText = {
             "expiration": "2020-01-01T12:00:00.000Z", //设置该Policy的失效时间，超过这个失效时间之后，就没有办法通过这个policy上传文件了
