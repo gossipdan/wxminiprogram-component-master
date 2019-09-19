@@ -1,0 +1,13 @@
+<topbar bindgetheight="getHeight">
+  <!-- <view>返回</view> -->
+</topbar>
+<update_modal showModalStatus="{{showModalStatus}}" msg="{{msg}}" bindhidemodal="hideUpdateModal" />
+<button type='primary' open-type='getUserInfo' bindgetuserinfo='getUserInfo' style='margin: 20rpx;'>授权</button>
+<button bindtap='showModal' style='background-color:#f1f1f1; margin: 20rpx;'>弹窗</button>
+<button bindtap='cropper' style='background-color:#f1f1f1; margin: 20rpx;'>上传图片</button>
+<!-- <button bindtap='upvideo' style='background-color:#f1f1f1; margin: 20rpx;'>上传视频</button> -->
+<!-- <navigator url="plugin://myPlugin/editvideo" >
+  <button bindtap='goto_editvideo' style='background-color:#f1f1f1; margin: 20rpx;'>进入插件页</button>
+</navigator> -->
+
+<image src='{{url}}'></image>

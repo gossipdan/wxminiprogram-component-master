@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "update_modal": "plugin://myPlugin/update_modal",
+    "topbar": "plugin://myPlugin/topbar"
+  }
+}

@@ -1,0 +1,4 @@
+<!--pages/crop_photo/crop_photo.wxml-->
+<view class='container'>
+  <cropper bindcrop="cropped" bindcancel="cancel" url="{{url}}" />
+</view>

@@ -1,0 +1,12 @@
+{
+  "publicComponents": {
+    "update_modal": "components/update_modal/update_modal",
+    "topbar": "components/topbar/topbar",
+    "cropper": "components/cropper/cropper",
+    "cutvideo": "components/cutvideo/cutvideo"
+  },
+  "main": "index.js",
+  "pages": {
+    "editvideo": "pages/editvideo/editvideo"
+  }
+}

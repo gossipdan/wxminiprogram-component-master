@@ -1,0 +1,22 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/crop_photo/crop_photo"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "小程序",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false,
+    "navigationStyle": "custom"
+  },
+  "functionalPages": true,
+  "plugins": {
+    "myPlugin": {
+      "version": "dev",
+      "provider": "wx9bee7b957f9c3664"
+    }
+  }
+}

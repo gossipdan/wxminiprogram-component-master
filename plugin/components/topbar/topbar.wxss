@@ -1,0 +1,42 @@
+.top-bar-root{
+  transition: all 0.3s;  
+}
+
+.status-bar {
+  position: fixed;
+  /* background: red; */
+}
+
+.navigation-bar {
+  position: fixed;
+  /* background: yellowgreen; */
+}
+
+.navigation {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+  font-size: 36rpx;
+}
+
+.menu {
+  position: fixed;
+}
+
+.title{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}

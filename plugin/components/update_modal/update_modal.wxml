@@ -1,0 +1,14 @@
+<!--更新提示弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModalStatus}}"></view>
+<view class="modal-dialog-view" wx:if="{{showModalStatus}}">
+  <view class='modal-dialog' animation="{{animationData}}">
+    <view class="modal-title">提示</view>
+    <view class="modal-content">
+      <view class='msg'>{{msg}}</view>
+    </view>
+    <view class="modal-footer">
+      <view class="btn-opera btn-cancel">取消</view>
+      <button class="btn-opera btn-confirm" bindtap='hideModal'>确定</button>
+    </view>
+  </view>
+</view>

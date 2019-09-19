@@ -1,0 +1,40 @@
+<view class='video_container' style='width:{{video_width}}px;height:{{video_height}}px;'>
+  <video id="myVideo" class='video_play' bindtimeupdate='video_play_handle' src="{{video_url}}" poster="{{video_cover}}" controls="{{false}}"  style="transform:rotate({{rotate*90}}deg);"></video>
+  <cover-view class='mask_view'>
+    <cover-image class='mask_img' 
+      style='top:{{mask_pos.offsetY}}px;left:{{mask_pos.offsetX}}px;width:{{cut.width}}px;height:{{cut.height}}px;'
+      catchtouchstart="maskTouchstartCallback" 
+      catchtouchmove="maskTouchmoveCallback" 
+      catchtouchend="maskTouchendCallback" 
+      src='../../images/emoticon_image_cut@3x.png'
+    ></cover-image>
+  </cover-view>
+</view>
+<view class='select_container'>
+  <view class='duration_time_view'>已选择{{all_duration}}</view>
+  <movable-area class="move_area" style="width:{{movearea_width}}px">
+    <view class='progress_bar_icon' style="display: {{timeBarState?'block':'none'}};left: {{progress_time}}px"></view>
+    <view class='progress_grey_background'></view>
+    <view class='progress_background_view' style="width: {{progressWidth}}px; left: {{progressLeft}}px"></view>
+    <movable-view class='move_slide_line' style="left: {{pageStartX}}px" out-of-bounds="false" inertia="false" direction="none" bindtouchstart='touch_start' bindtouchmove='tipStartMovehandle' bindtouchend='tipTouchEnd'>
+      <image class='slide_img' src="../../images/clip_left_btn.jpg"></image>
+      <image class='number_progress_tipe' src='../../images/bubble.png' style="display: {{tipBarStartState?'block':'none'}}"></image>
+      <view class='text_progress_tipe' style="display: {{tipBarStartState?'block':'none'}}">{{startTime}}</view>
+    </movable-view>
+
+    <movable-view class='move_slide_line' style="left: {{pageEndX}}px" out-of-bounds="false" inertia="false" direction="none" bindtouchstart='touch_start' bindtouchmove='tipEndMovehandle' bindtouchend='tipTouchEnd'>
+      <image class='slide_img' src="../../images/clip_right_btn.jpg"></image>
+      <image class='number_progress_tipe' src='../../images/bubble.png' style="display: {{tipBarEndState?'block':'none'}}"></image>
+      <view class='text_progress_tipe' style="display: {{tipBarEndState?'block':'none'}}">{{endTime}}</view>
+    </movable-view>
+  </movable-area>
+  <view class='progress_text_info'>拖动截取视频</view>
+</view>
+
+<view class='footer'>
+  <view class='operate_btn' style='width:100%;' bindtap='cancel_edit'>取消</view>
+  <view class='isolation'>|</view>
+  <view wx:if="{{isRotate}}" class='operate_btn' style='width:100%;' bindtap='rotate_edit'>旋转</view>
+  <view wx:if="{{isRotate}}" class='isolation'>|</view>
+  <view class='operate_btn confirm' style='width:100%;' bindtap='confirm_edit'>完成</view>
+</view>

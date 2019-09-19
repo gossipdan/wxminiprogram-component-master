@@ -1,0 +1,28 @@
+<view class='root-class' style='position:{{position}};top:0;left:0;z-index:1;{{ rootStyle }}' wx:if="{{!cover}}" >
+  <!-- status-bar -->
+  <view class="status-bar" style="{{ statusBarStyle + bgStyle }}"/>
+  <!-- navigation-bar -->
+  <view class="navigation-bar" style="{{ navigationBarStyle + bgStyle }}">
+    <!-- title -->
+    <view class="navigation" style="{{ navigationStyle }}">
+      <slot></slot>
+    </view>
+    <view class="title" style='{{navigationBarStyle}}color:{{color}};margin-left:10rpx;'>{{title}}</view>
+  </view>
+  <!-- menu -->
+  <view class="menu" style="{{ menuStyle }}"/>
+</view>
+<view style='position:{{position}};top:0;left:0;z-index:1;{{ rootStyle }}' wx:else>
+  <!-- status-bar -->
+  <cover-view class="status-bar" style="{{ statusBarStyle }}"/>
+  <!-- navigation-bar -->
+  <cover-view class="navigation-bar" style="{{ navigationBarStyle }}">
+    <!-- title -->
+    <cover-view class="navigation" style="{{ navigationStyle }}">
+      <slot></slot>
+    </cover-view>
+    <cover-view class="title" style='{{navigationBarStyle}}color:{{color}};margin-left:10rpx;'>{{title}}</cover-view>
+  </cover-view>
+  <!-- menu -->
+  <cover-view class="menu" style="{{ menuStyle }}"/>
+</view>
